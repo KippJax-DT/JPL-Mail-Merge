@@ -1,0 +1,25 @@
+# More information about the configuration file can be found here:
+# https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-config.html
+version = 0.1
+
+[default]
+[default.global.parameters]
+stack_name = "JPLxKIPPJAX-mailmerge"
+
+[default.build.parameters]
+parallel = true
+
+[default.validate.parameters]
+lint = true
+
+[default.deploy.parameters]
+capabilities = "CAPABILITY_IAM"
+confirm_changeset = true
+deployment_preference = "AllAtOnce"
+region = "us-east-1"
+s3_prefix = "JPLxKIPPJAX-mailmerge"
+image_repositories = ["mergingmail=670181324081.dkr.ecr.us-east-1.amazonaws.com/jplxkippjaxmailmerge1fb6177a/mergingmailf8c55f59repo"]
+resolve_s3 = true
+
+[default.package.parameters]
+template_file = "template.yaml"
