@@ -89,22 +89,10 @@ def lambda_handler(event, context):
             merged_document.element.body.append(element)
     
     print('Document Merged.')  
-    # Remove section breaks from the merged document
-    # section_breaks = merged_document.paragraphs
-    # for para in section_breaks:
-    #     if para.text == '\x0c':
-    #         para.clear()
-            
-    # for para in merged_document.paragraphs:
-    #     for run in para.runs:
-    #         run.text = run.text.replace('|anan', '|')           
-    # merged_document.save(output)
+
     
-    # with open(output, 'w') as f:
-    #     for paragraph in merged_document.paragraphs:
-    #         f.write(paragraph.text)
-    #     logger.info(f"Converting to txt: {f}")
-        
+    # Remove section breaks from the merged document
+
     #   Augmented Code Here
     
     merged_document.save(output)
